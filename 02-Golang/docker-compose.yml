@@ -1,0 +1,12 @@
+version: '3'
+services:
+
+    golang:
+      build: ./docker/golang
+      tty: true
+      working_dir: "/go/src/github.com/inatatsu-tatsuhiro/server/"
+      restart: always
+      ports:
+        - 8888:8888
+      volumes:
+          - ./src/server:/go/src/github.com/inatatsu-tatsuhiro/server
